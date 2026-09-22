@@ -1,0 +1,51 @@
+
+========================================================================
+  ZERO-SHOT  -- hand-written holdout (n=100)
+========================================================================
+  accuracy 0.910 | macro F1 0.907 | ECE 0.100 | mean conf 0.859
+
+  label          prec    rec     f1    n
+  request       0.947  0.720  0.818   25
+  inquiry       0.833  1.000  0.909   25
+  complaint     0.958  0.920  0.939   25
+  feedback      0.926  1.000  0.962   25
+
+               request inquirycomplainfeedback     (rows = true)
+request             18       4       1       2
+inquiry              0      25       0       0
+complaint            1       1      23       0
+feedback             0       0       0      25
+
+  hard cases (13): 0.846     easy cases (87): 0.920
+
+========================================================================
+  FINE-TUNED  -- hand-written holdout (n=100)
+========================================================================
+  accuracy 0.980 | macro F1 0.980 | ECE 0.021 | mean conf 0.999
+
+  label          prec    rec     f1    n
+  request       0.962  1.000  0.980   25
+  inquiry       0.962  1.000  0.980   25
+  complaint     1.000  0.920  0.958   25
+  feedback      1.000  1.000  1.000   25
+
+               request inquirycomplainfeedback     (rows = true)
+request             25       0       0       0
+inquiry              0      25       0       0
+complaint            1       1      23       0
+feedback             0       0       0      25
+
+  hard cases (13): 0.846     easy cases (87): 1.000
+
+========================================================================
+  McNemar: fine-tuning fixed 7, broke 0  ->  p = 0.01562
+========================================================================
+
+  ERRORS THE FINE-TUNED MODEL STILL MAKES (2):
+
+  true=complaint  pred=request    conf=1.00 [HARD]
+      'Third time asking. Please stop sending marketing texts. I have unsubscribed twice already.'
+
+  true=complaint  pred=inquiry    conf=1.00 [HARD]
+      "It broke after nine days. Nine. I'd like to know what you intend to do about it."
+

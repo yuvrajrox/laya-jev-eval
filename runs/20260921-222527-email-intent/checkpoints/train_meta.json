@@ -1,0 +1,43 @@
+{
+  "base_model": "/Users/yuvraj/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/1c5edc17a7acd8701df6fc341c0d179f1c62c982/typed-decisions",
+  "best_epoch": 1,
+  "best_val_acc": 1.0,
+  "zero_shot_val_acc": 0.9316239316239316,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": -0.47073533920788324,
+      "val_acc": 1.0,
+      "elapsed_s": 80.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": -0.4999996985028858,
+      "val_acc": 1.0,
+      "elapsed_s": 155.9
+    },
+    {
+      "epoch": 3,
+      "train_loss": -0.4999998614100591,
+      "val_acc": 1.0,
+      "elapsed_s": 230.5
+    }
+  ],
+  "args": {
+    "model_dir": "/Users/yuvraj/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/1c5edc17a7acd8701df6fc341c0d179f1c62c982/typed-decisions",
+    "train": "../reply-intent/runs/20260921-222527-email-intent/data/02_grouped_train.jsonl",
+    "run_dir": "../reply-intent/runs/20260921-222527-email-intent",
+    "epochs": 3,
+    "batch_size": 8,
+    "eval_batch_size": 32,
+    "lr": 1e-05,
+    "head_lr": 0.0001,
+    "val_frac": 0.1,
+    "seed": 20260921,
+    "freeze_encoder": false,
+    "device": null
+  },
+  "train_n": 1298,
+  "val_n": 117,
+  "minutes": 3.8
+}

@@ -1,0 +1,11 @@
+Jaccard token similarity of each TEST row to its nearest TRAIN row
+
+  similarity       rows   share
+  0.3 - 0.4           4    4.0%
+  0.2 - 0.3          11   11.0%
+  0.1 - 0.2          76   76.0%
+  0.0 - 0.1           9    9.0%
+
+  test rows >= 0.8 similar to a training row: 0 / 100 (0.0%)
+
+near-duplicate examples (test vs its closest train row):

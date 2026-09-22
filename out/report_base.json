@@ -1,0 +1,221 @@
+[
+  {
+    "name": "laya:root",
+    "n": 30,
+    "accuracy": 0.7333333333333333,
+    "macro_f1": 0.6588078588078587,
+    "ece": 0.17945333333333335,
+    "brier": 0.38352388166666673,
+    "per_class": {
+      "interested": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666665,
+        "support": 4
+      },
+      "not_interested": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.7692307692307693,
+        "support": 5
+      },
+      "ooo": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "support": 6
+      },
+      "unsubscribe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "referral": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      "bounce": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 1
+      },
+      "other": {
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "support": 6
+      }
+    },
+    "confusion": [
+      [
+        3,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        3
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 30,
+        "accuracy": 0.7333333333333333,
+        "threshold": 0.2705
+      },
+      {
+        "coverage": 0.95,
+        "n": 28,
+        "accuracy": 0.75,
+        "threshold": 0.3373
+      },
+      {
+        "coverage": 0.9,
+        "n": 27,
+        "accuracy": 0.7777777777777778,
+        "threshold": 0.3682
+      },
+      {
+        "coverage": 0.85,
+        "n": 26,
+        "accuracy": 0.8076923076923077,
+        "threshold": 0.3696
+      },
+      {
+        "coverage": 0.8,
+        "n": 24,
+        "accuracy": 0.8333333333333334,
+        "threshold": 0.4148
+      },
+      {
+        "coverage": 0.7,
+        "n": 21,
+        "accuracy": 0.8571428571428571,
+        "threshold": 0.4762
+      },
+      {
+        "coverage": 0.6,
+        "n": 18,
+        "accuracy": 0.8888888888888888,
+        "threshold": 0.6391
+      },
+      {
+        "coverage": 0.5,
+        "n": 15,
+        "accuracy": 0.9333333333333333,
+        "threshold": 0.6801
+      }
+    ],
+    "reliability": [
+      {
+        "bin": "0.2-0.3",
+        "n": 1,
+        "mean_conf": 0.2705,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 5,
+        "mean_conf": 0.35897999999999997,
+        "accuracy": 0.2
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 4,
+        "mean_conf": 0.4548,
+        "accuracy": 0.5
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 1,
+        "mean_conf": 0.5754,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 7,
+        "mean_conf": 0.6629714285714285,
+        "accuracy": 0.8571428571428571
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 2,
+        "mean_conf": 0.7721499999999999,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 1,
+        "mean_conf": 0.8142,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 9,
+        "mean_conf": 0.9786555555555556,
+        "accuracy": 0.8888888888888888
+      }
+    ],
+    "accuracy_hard": 0.625,
+    "n_hard": 8
+  }
+]

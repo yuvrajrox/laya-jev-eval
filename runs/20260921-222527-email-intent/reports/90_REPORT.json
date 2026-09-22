@@ -1,0 +1,411 @@
+{
+  "zeroshot_all": {
+    "n": 2000,
+    "accuracy": 0.952,
+    "macro_f1": 0.9510495974673642,
+    "ece": 0.07618456099999943,
+    "brier": 0.0947771263205616,
+    "per_class": {
+      "request": {
+        "precision": 0.9836448598130841,
+        "recall": 0.8271119842829077,
+        "f1": 0.8986125933831377,
+        "support": 509
+      },
+      "inquiry": {
+        "precision": 0.8625678119349005,
+        "recall": 1.0,
+        "f1": 0.9262135922330097,
+        "support": 477
+      },
+      "complaint": {
+        "precision": 0.9804305283757339,
+        "recall": 0.9862204724409449,
+        "f1": 0.9833169774288517,
+        "support": 508
+      },
+      "feedback": {
+        "precision": 0.9940944881889764,
+        "recall": 0.9980237154150198,
+        "f1": 0.9960552268244576,
+        "support": 506
+      }
+    },
+    "confusion": [
+      [
+        421,
+        76,
+        9,
+        3
+      ],
+      [
+        0,
+        477,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        501,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        505
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 2000,
+        "accuracy": 0.952,
+        "threshold": 0.368187
+      },
+      {
+        "coverage": 0.95,
+        "n": 1900,
+        "accuracy": 0.9726315789473684,
+        "threshold": 0.625925
+      },
+      {
+        "coverage": 0.9,
+        "n": 1800,
+        "accuracy": 0.975,
+        "threshold": 0.714181
+      },
+      {
+        "coverage": 0.85,
+        "n": 1700,
+        "accuracy": 0.9770588235294118,
+        "threshold": 0.775763
+      },
+      {
+        "coverage": 0.8,
+        "n": 1600,
+        "accuracy": 0.978125,
+        "threshold": 0.817905
+      },
+      {
+        "coverage": 0.7,
+        "n": 1400,
+        "accuracy": 0.9814285714285714,
+        "threshold": 0.874022
+      },
+      {
+        "coverage": 0.6,
+        "n": 1200,
+        "accuracy": 0.9808333333333333,
+        "threshold": 0.896162
+      },
+      {
+        "coverage": 0.5,
+        "n": 1000,
+        "accuracy": 0.979,
+        "threshold": 0.91522
+      }
+    ],
+    "mean_conf": 0.8768728079999998
+  },
+  "zeroshot_test": {
+    "n": 585,
+    "accuracy": 0.9504273504273504,
+    "macro_f1": 0.9521776218139577,
+    "ece": 0.07823964957264959,
+    "brier": 0.10248149085986832,
+    "per_class": {
+      "request": {
+        "precision": 0.986013986013986,
+        "recall": 0.844311377245509,
+        "f1": 0.9096774193548386,
+        "support": 167
+      },
+      "inquiry": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923,
+        "support": 138
+      },
+      "complaint": {
+        "precision": 0.9731543624161074,
+        "recall": 0.9863945578231292,
+        "f1": 0.9797297297297297,
+        "support": 147
+      },
+      "feedback": {
+        "precision": 1.0,
+        "recall": 0.9924812030075187,
+        "f1": 0.9962264150943396,
+        "support": 133
+      }
+    },
+    "confusion": [
+      [
+        141,
+        23,
+        3,
+        0
+      ],
+      [
+        0,
+        138,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        145,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        132
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 585,
+        "accuracy": 0.9504273504273504,
+        "threshold": 0.402631
+      },
+      {
+        "coverage": 0.95,
+        "n": 556,
+        "accuracy": 0.9640287769784173,
+        "threshold": 0.63871
+      },
+      {
+        "coverage": 0.9,
+        "n": 526,
+        "accuracy": 0.967680608365019,
+        "threshold": 0.719178
+      },
+      {
+        "coverage": 0.85,
+        "n": 497,
+        "accuracy": 0.9678068410462777,
+        "threshold": 0.78436
+      },
+      {
+        "coverage": 0.8,
+        "n": 468,
+        "accuracy": 0.967948717948718,
+        "threshold": 0.834083
+      },
+      {
+        "coverage": 0.7,
+        "n": 410,
+        "accuracy": 0.9707317073170731,
+        "threshold": 0.874923
+      },
+      {
+        "coverage": 0.6,
+        "n": 351,
+        "accuracy": 0.9715099715099715,
+        "threshold": 0.893168
+      },
+      {
+        "coverage": 0.5,
+        "n": 292,
+        "accuracy": 0.9691780821917808,
+        "threshold": 0.909615
+      }
+    ],
+    "mean_conf": 0.874725526495726
+  },
+  "finetuned_test": {
+    "n": 585,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "ece": 6.256410252092337e-07,
+    "brier": 3.0417094017089305e-11,
+    "per_class": {
+      "request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 167
+      },
+      "inquiry": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 138
+      },
+      "complaint": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 147
+      },
+      "feedback": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 133
+      }
+    },
+    "confusion": [
+      [
+        167,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        138,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        147,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        133
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 585,
+        "accuracy": 1.0,
+        "threshold": 0.999946
+      },
+      {
+        "coverage": 0.95,
+        "n": 556,
+        "accuracy": 1.0,
+        "threshold": 0.999999
+      },
+      {
+        "coverage": 0.9,
+        "n": 526,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.85,
+        "n": 497,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.8,
+        "n": 468,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.7,
+        "n": 410,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.6,
+        "n": 351,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.5,
+        "n": 292,
+        "accuracy": 1.0,
+        "threshold": 1.0
+      }
+    ],
+    "mean_conf": 0.9999993743589748
+  },
+  "mcnemar": {
+    "n_compared": 585,
+    "b_fixed_a_broke": 29,
+    "a_had_b_broke": 0,
+    "p_value": 3.725290298461914e-09
+  },
+  "split": {
+    "rows": 2000,
+    "unique_texts": 1210,
+    "duplicate_rows": 790,
+    "grouped": {
+      "train": 1415,
+      "test": 585,
+      "test_rows_also_seen_in_train": 0,
+      "leak_pct": 0.0
+    },
+    "naive": {
+      "train": 1400,
+      "test": 600,
+      "test_rows_also_seen_in_train": 298,
+      "leak_pct": 49.7
+    },
+    "train_label_counts": {
+      "request": 342,
+      "inquiry": 339,
+      "feedback": 373,
+      "complaint": 361
+    },
+    "test_label_counts": {
+      "request": 167,
+      "complaint": 147,
+      "inquiry": 138,
+      "feedback": 133
+    },
+    "seed": 20260921
+  },
+  "train_meta": {
+    "base_model": "/Users/yuvraj/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/1c5edc17a7acd8701df6fc341c0d179f1c62c982/typed-decisions",
+    "best_epoch": 1,
+    "best_val_acc": 1.0,
+    "zero_shot_val_acc": 0.9316239316239316,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": -0.47073533920788324,
+        "val_acc": 1.0,
+        "elapsed_s": 80.2
+      },
+      {
+        "epoch": 2,
+        "train_loss": -0.4999996985028858,
+        "val_acc": 1.0,
+        "elapsed_s": 155.9
+      },
+      {
+        "epoch": 3,
+        "train_loss": -0.4999998614100591,
+        "val_acc": 1.0,
+        "elapsed_s": 230.5
+      }
+    ],
+    "args": {
+      "model_dir": "/Users/yuvraj/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/1c5edc17a7acd8701df6fc341c0d179f1c62c982/typed-decisions",
+      "train": "../reply-intent/runs/20260921-222527-email-intent/data/02_grouped_train.jsonl",
+      "run_dir": "../reply-intent/runs/20260921-222527-email-intent",
+      "epochs": 3,
+      "batch_size": 8,
+      "eval_batch_size": 32,
+      "lr": 1e-05,
+      "head_lr": 0.0001,
+      "val_frac": 0.1,
+      "seed": 20260921,
+      "freeze_encoder": false,
+      "device": null
+    },
+    "train_n": 1298,
+    "val_n": 117,
+    "minutes": 3.8
+  }
+}

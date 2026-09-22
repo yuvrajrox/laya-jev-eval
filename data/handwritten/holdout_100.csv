@@ -1,0 +1,123 @@
+email,intent,hard,domain
+Could you please close my savings account? I've moved banks and no longer need it.,request,False,banking
+"hi - need to add my wife as an authorised driver on the policy before friday. she's had her licence 11 years, clean. what do you need from me",request,False,insurance
+Please cancel the auto-renewal on order #88213. I'd rather re-subscribe manually next year.,request,False,retail
+"Dear Support Team,
+
+Following our call this morning, I would be grateful if you could reset the two-factor authentication on my account. I no longer have access to the old handset.
+
+Kind regards,
+Margaret Ellison",request,False,saas
+Move my appointment from the 14th to any morning the following week please.,request,False,healthcare
+Can you send across the VAT invoice for last month? Our accountant is chasing.,request,False,finance
+"Swap the seats to aisle if there's anything left, two passengers, booking QJ4471.",request,False,travel
+"I'd like to downgrade from the Pro tier to Starter at the end of the billing cycle. Not unhappy with it, we just aren't using the extra seats.",request,True,saas
+"please remove my old address from the account, it keeps autofilling at checkout",request,False,retail
+"Would you be able to raise the daily transfer limit on my current account to £5,000? Happy to provide whatever verification you need.",request,False,banking
+Kindly arrange a replacement fob. Mine stopped working over the weekend and I can't get into the building.,request,True,facilities
+Add my new number to the file: 07700 900381. The old one is dead.,request,False,telecom
+Requesting a copy of my full medical record under a subject access request. Please confirm what ID you need.,request,False,healthcare
+"Hey, could someone re-issue the certificate? I managed to delete the PDF before saving it. Sorry.",request,False,education
+"We need the contract amended to reflect the new entity name — Harbourline Logistics Ltd, not Harbourline Ltd. Legal is holding signature until it's fixed.",request,False,b2b
+Book me onto the November cohort instead of October. Work travel got in the way.,request,False,education
+Please transfer my number to the new SIM. PAC code attached.,request,False,telecom
+"Set up a direct debit for the monthly premium rather than the annual lump sum, if that's possible.",request,False,insurance
+Attaching the signed form. Please process the beneficiary change when you can.,request,False,finance
+Can you unlock my account? I locked myself out trying to remember the security answer.,request,False,banking
+"I'd like the parcel redirected to my office — 4 Bower Street, not the home address. It's out for delivery tomorrow so this is a bit urgent.",request,False,retail
+"Extend the trial by two weeks please, our procurement process is slower than expected.",request,False,saas
+Please delete my account and everything associated with it.,request,True,saas
+Could you arrange an interpreter for the appointment on the 3rd? Cantonese.,request,False,healthcare
+send the statement for the last 6 months to this email pls,request,False,banking
+What happens to my unused data allowance at the end of the month — does it roll over?,inquiry,False,telecom
+"Hi, wondering how long the underwriting usually takes once the medical is done? No rush, just planning.",inquiry,False,insurance
+"Do you deliver to the Isle of Skye, and if so is there a surcharge?",inquiry,False,retail
+"Dear Sir or Madam,
+
+I am writing to ask whether the postgraduate diploma is recognised by the professional body in Ireland. I could not find this on your website.
+
+Yours faithfully,
+A. Nwachukwu",inquiry,False,education
+any update on the claim? submitted it on the 2nd and haven't heard anything,inquiry,True,insurance
+Which documents count as proof of address for you? I don't have a utility bill in my name.,inquiry,False,banking
+Is the lounge access included on the business fare or is that an add-on?,inquiry,False,travel
+Could you clarify the difference between the Standard and Enhanced checks? The pricing page lists both but not what changes.,inquiry,False,b2b
+what time does the pharmacy counter close on saturdays,inquiry,False,healthcare
+Where has my order got to? It said 3-5 days and we're on day 9.,inquiry,True,retail
+Is there a student rate? I'm enrolled full time until June.,inquiry,False,education
+Can you confirm whether data is held in the EU? Our DPO needs this before we can sign.,inquiry,False,b2b
+"How many people can I add to a family plan, and do they all need to live at the same address?",inquiry,False,telecom
+"Hello — quick question. If I pause the subscription, do I keep the history or is it wiped?",inquiry,False,saas
+"Am I covered for accidental damage abroad, or is that only the home contents part of the policy?",inquiry,False,insurance
+Who do I speak to about a bulk order? Around 400 units.,inquiry,False,retail
+Just checking — is the appointment on the 12th at the Lister site or the main hospital? The letter says both.,inquiry,False,healthcare
+Do you have a status page? Trying to work out if the slowness this morning is us or you.,inquiry,True,saas
+Could you tell me what the early repayment charge would be if I settled the loan in March?,inquiry,False,finance
+Tell me what your refund window is for opened items.,inquiry,False,retail
+Is there parking on site and does it need booking in advance?,inquiry,False,facilities
+hi does the warranty still apply if i bought it through a reseller rather than direct,inquiry,False,retail
+What's the notice period on the annual contract? Trying to work out our renewal timeline.,inquiry,False,b2b
+Could you provide a breakdown of the fees on the last statement? Line 4 isn't clear to me.,inquiry,True,banking
+"When are the results published, and will we be notified by email or post?",inquiry,False,education
+This is the third engineer visit for the same fault and it is still not fixed. I have taken three days off work for this.,complaint,False,telecom
+I was charged twice for the same booking and nobody has come back to me in eight days. Frankly this is not good enough for a company of your size.,complaint,False,travel
+The dress arrived with a tear along the seam. Clearly it was not checked before dispatch.,complaint,False,retail
+"Dear Complaints Team,
+
+I wish to raise a formal complaint regarding the handling of my claim, reference CL-40921. I was told on three separate occasions that a decision was imminent, and on each occasion no decision followed. I have now been without a vehicle for six weeks.
+
+I expect a written response within the statutory timeframe.
+
+Yours sincerely,
+D. Okonjo",complaint,False,insurance
+your app has logged me out every single day this week. losing patience with it,complaint,False,saas
+I'm disappointed. The room was not the one shown in the photographs and the air conditioning did not work for two of the three nights.,complaint,False,travel
+Nobody told me the fee had gone up. I only found out when the direct debit came out higher. That should have been communicated.,complaint,False,banking
+Waited 50 minutes past my appointment time and then was seen for four minutes. It felt rushed and I left without my questions answered.,complaint,False,healthcare
+The replacement you sent is the wrong colour. Again. This is the second time.,complaint,False,retail
+I have been passed between four different departments this morning and had to repeat my details each time. Please can someone take ownership of this.,complaint,True,telecom
+Honestly the new interface is a step backwards. Things that took one click now take four and there was no warning it was changing.,complaint,True,saas
+Still no refund. It has been 21 working days and your policy says 10.,complaint,False,retail
+"The course materials were out of date — half the screenshots don't match the current software. For the price, I expected better.",complaint,False,education
+"I was assured the engineer would call before arriving. He didn't, I wasn't in, and now I'm told the next slot is in a fortnight.",complaint,False,facilities
+unacceptable. my payment failed because of your outage and now i've been charged a late fee by my landlord,complaint,False,finance
+"The delivery driver left the parcel in the recycling bin, in the rain, without ringing the bell. It was destroyed.",complaint,False,retail
+I am not happy that the premium increased by 40% with no change in my circumstances and no explanation offered.,complaint,False,insurance
+Your chatbot is useless and there is no way to reach a human. I have spent 25 minutes trying to find a phone number.,complaint,False,saas
+The seats we paid extra to reserve were reassigned at the gate with no explanation and no refund offered.,complaint,False,travel
+Third time asking. Please stop sending marketing texts. I have unsubscribed twice already.,complaint,True,telecom
+The invoice is wrong again — you've billed us for 40 licences and we have 25. This happens most months and it wastes an hour of my time each time.,complaint,False,b2b
+Reception was rude when I asked about the delay. There was no need for that tone.,complaint,False,healthcare
+It broke after nine days. Nine. I'd like to know what you intend to do about it.,complaint,True,retail
+"Very poor communication throughout. Nobody called back when they said they would, on any of the four occasions.",complaint,False,b2b
+"I've been overcharged, underpaid and ignored. At this point I'm considering the ombudsman.",complaint,False,finance
+"Just wanted to say the engineer who came out yesterday, Danny, was excellent. Explained everything and cleaned up after himself.",feedback,False,telecom
+"Genuinely the smoothest checkout I've used. No account required, no upsells. Refreshing.",feedback,False,retail
+"Dear Team,
+
+I wanted to pass on my thanks to the ward staff on Elm. My mother was there for eleven days and the care she received was exceptional, particularly from the night team who I know are stretched.
+
+With gratitude,
+H. Pereira",feedback,False,healthcare
+the new dark mode is lovely. easy on the eyes at 1am,feedback,False,saas
+Worth every penny. We've cut our monthly close from six days to two.,feedback,False,b2b
+Loved the course. The tutor was patient with the slower ones of us and never made anyone feel stupid.,feedback,False,education
+"Fast, friendly, no fuss. Will use again.",feedback,False,retail
+"Hotel was spotless and the breakfast was far better than we expected for the price. Small thing, but the staff remembered our names.",feedback,False,travel
+Honestly I was sceptical about switching but it's been painless. Credit where it's due.,feedback,False,banking
+The claims process was much less painful than I'd braced for. Sorted in four days.,feedback,False,insurance
+"Great app overall. If I could suggest one thing, a widget for the home screen would be brilliant.",feedback,True,saas
+Thank you for sorting that so quickly yesterday. Real relief.,feedback,False,finance
+Big improvement on last year's event. The venue change was the right call.,feedback,False,education
+Your support person — I think her name was Riya — went well beyond what I expected. Please pass that on.,feedback,False,saas
+"Product is good. Packaging is excessive though, four boxes for one small item.",feedback,True,retail
+Been with you eleven years and never had a reason to leave. That says something.,feedback,False,insurance
+Really appreciate that you publish the changelog properly. Most companies don't bother.,feedback,False,saas
+"The physio was brilliant, gave me exercises I could actually do at home. Much better than last time.",feedback,False,healthcare
+"food was decent, service was quick, no complaints at all",feedback,False,travel
+Impressed that someone actually read my last email rather than sending a template. Rare these days.,feedback,False,b2b
+The onboarding call was genuinely useful rather than a sales pitch in disguise. Thanks.,feedback,False,b2b
+Lovely to deal with a company that answers the phone. That alone.,feedback,False,telecom
+Delivery was three days early which never happens. Made my week.,feedback,False,retail
+I like the new statements — much clearer than the old format.,feedback,False,banking
+Ten out of ten. Nothing to add.,feedback,False,retail

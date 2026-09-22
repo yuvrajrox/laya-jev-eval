@@ -1,0 +1,30 @@
+{
+  "rows": 2000,
+  "unique_texts": 1210,
+  "duplicate_rows": 790,
+  "grouped": {
+    "train": 1415,
+    "test": 585,
+    "test_rows_also_seen_in_train": 0,
+    "leak_pct": 0.0
+  },
+  "naive": {
+    "train": 1400,
+    "test": 600,
+    "test_rows_also_seen_in_train": 298,
+    "leak_pct": 49.7
+  },
+  "train_label_counts": {
+    "request": 342,
+    "inquiry": 339,
+    "feedback": 373,
+    "complaint": 361
+  },
+  "test_label_counts": {
+    "request": 167,
+    "complaint": 147,
+    "inquiry": 138,
+    "feedback": 133
+  },
+  "seed": 20260921
+}

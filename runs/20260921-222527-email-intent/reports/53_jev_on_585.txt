@@ -1,0 +1,16 @@
+==============================================================================
+  ORIGINAL TEMPLATE TEST SPLIT (n=585)
+==============================================================================
+  model              accuracy  macro F1     ECE   mean conf
+  Laya zero-shot       0.9504     0.952   0.078       0.875
+  Laya fine-tuned      1.0000     1.000   0.000       1.000
+  Jev 1.13.0           0.9744     0.976   0.022       0.984
+
+  confidence when WRONG:
+  Laya zero-shot     0.40-0.95 (n=29, median 0.84)
+  Laya fine-tuned    (none wrong)
+  Jev 1.13.0         0.51-1.00 (n=15, median 0.97)
+
+  paired:
+  Laya zero-shot    vs Jev 1.13.0    Jev won  27, Laya won  13 -> p=0.0385
+  Laya fine-tuned   vs Jev 1.13.0    Jev won   0, Laya won  15 -> p=6.1e-05

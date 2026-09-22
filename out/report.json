@@ -1,0 +1,575 @@
+[
+  {
+    "name": "majority",
+    "n": 32,
+    "accuracy": 0.125,
+    "macro_f1": 0.031746031746031744,
+    "ece": 0.875,
+    "brier": 1.75,
+    "per_class": {
+      "interested": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f1": 0.2222222222222222,
+        "support": 4
+      },
+      "not_interested": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "ooo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "unsubscribe": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "referral": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      "bounce": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      }
+    },
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 32,
+        "accuracy": 0.125,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.95,
+        "n": 30,
+        "accuracy": 0.13333333333333333,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.9,
+        "n": 29,
+        "accuracy": 0.13793103448275862,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.85,
+        "n": 27,
+        "accuracy": 0.14814814814814814,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.8,
+        "n": 26,
+        "accuracy": 0.15384615384615385,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.7,
+        "n": 22,
+        "accuracy": 0.18181818181818182,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.6,
+        "n": 19,
+        "accuracy": 0.21052631578947367,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.5,
+        "n": 16,
+        "accuracy": 0.25,
+        "threshold": 1.0
+      }
+    ],
+    "reliability": [
+      {
+        "bin": "0.9-1.0",
+        "n": 32,
+        "mean_conf": 1.0,
+        "accuracy": 0.125
+      }
+    ],
+    "accuracy_hard": 0.0,
+    "n_hard": 8
+  },
+  {
+    "name": "rules",
+    "n": 32,
+    "accuracy": 0.3125,
+    "macro_f1": 0.2393939393939394,
+    "ece": 0.1649999999999999,
+    "brier": 0.7329833333333333,
+    "per_class": {
+      "interested": {
+        "precision": 0.15384615384615385,
+        "recall": 1.0,
+        "f1": 0.2666666666666667,
+        "support": 4
+      },
+      "not_interested": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "ooo": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "support": 6
+      },
+      "unsubscribe": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "referral": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      "bounce": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      }
+    },
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 32,
+        "accuracy": 0.3125,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.95,
+        "n": 30,
+        "accuracy": 0.3333333333333333,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.9,
+        "n": 29,
+        "accuracy": 0.3448275862068966,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.85,
+        "n": 27,
+        "accuracy": 0.37037037037037035,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.8,
+        "n": 26,
+        "accuracy": 0.38461538461538464,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.7,
+        "n": 22,
+        "accuracy": 0.45454545454545453,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.6,
+        "n": 19,
+        "accuracy": 0.5263157894736842,
+        "threshold": 0.35
+      },
+      {
+        "coverage": 0.5,
+        "n": 16,
+        "accuracy": 0.625,
+        "threshold": 0.35
+      }
+    ],
+    "reliability": [
+      {
+        "bin": "0.3-0.4",
+        "n": 26,
+        "mean_conf": 0.34999999999999987,
+        "accuracy": 0.15384615384615385
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 6,
+        "mean_conf": 0.9699999999999999,
+        "accuracy": 1.0
+      }
+    ],
+    "accuracy_hard": 0.25,
+    "n_hard": 8
+  },
+  {
+    "name": "laya:typed-decisions",
+    "n": 32,
+    "accuracy": 0.71875,
+    "macro_f1": 0.6403628117913833,
+    "ece": 0.20807499999999998,
+    "brier": 0.44491106906249994,
+    "per_class": {
+      "interested": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714285714285715,
+        "support": 4
+      },
+      "not_interested": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002,
+        "support": 5
+      },
+      "ooo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "unsubscribe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "referral": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      "bounce": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "other": {
+        "precision": 0.6666666666666666,
+        "recall": 0.3333333333333333,
+        "f1": 0.4444444444444444,
+        "support": 6
+      }
+    },
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "risk_coverage": [
+      {
+        "coverage": 1.0,
+        "n": 32,
+        "accuracy": 0.71875,
+        "threshold": 0.2859
+      },
+      {
+        "coverage": 0.95,
+        "n": 30,
+        "accuracy": 0.7666666666666667,
+        "threshold": 0.3081
+      },
+      {
+        "coverage": 0.9,
+        "n": 29,
+        "accuracy": 0.7931034482758621,
+        "threshold": 0.3116
+      },
+      {
+        "coverage": 0.85,
+        "n": 27,
+        "accuracy": 0.8518518518518519,
+        "threshold": 0.3232
+      },
+      {
+        "coverage": 0.8,
+        "n": 26,
+        "accuracy": 0.8461538461538461,
+        "threshold": 0.3259
+      },
+      {
+        "coverage": 0.7,
+        "n": 22,
+        "accuracy": 0.9090909090909091,
+        "threshold": 0.3969
+      },
+      {
+        "coverage": 0.6,
+        "n": 19,
+        "accuracy": 0.9473684210526315,
+        "threshold": 0.4471
+      },
+      {
+        "coverage": 0.5,
+        "n": 16,
+        "accuracy": 0.9375,
+        "threshold": 0.5192
+      }
+    ],
+    "reliability": [
+      {
+        "bin": "0.2-0.3",
+        "n": 1,
+        "mean_conf": 0.2859,
+        "accuracy": 0.0
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 10,
+        "mean_conf": 0.33879000000000004,
+        "accuracy": 0.4
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 5,
+        "mean_conf": 0.44210000000000005,
+        "accuracy": 0.8
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 3,
+        "mean_conf": 0.5274333333333333,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 6,
+        "mean_conf": 0.6547833333333334,
+        "accuracy": 1.0
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 6,
+        "mean_conf": 0.7437333333333332,
+        "accuracy": 0.8333333333333334
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 1,
+        "mean_conf": 0.8365,
+        "accuracy": 1.0
+      }
+    ],
+    "accuracy_hard": 0.375,
+    "n_hard": 8
+  }
+]

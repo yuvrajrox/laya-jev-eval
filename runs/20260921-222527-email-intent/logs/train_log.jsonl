@@ -1,0 +1,4 @@
+{"epoch": 0, "val_acc": 0.9316239316239316, "note": "zero-shot"}
+{"epoch": 1, "train_loss": -0.47073533920788324, "val_acc": 1.0, "elapsed_s": 80.2}
+{"epoch": 2, "train_loss": -0.4999996985028858, "val_acc": 1.0, "elapsed_s": 155.9}
+{"epoch": 3, "train_loss": -0.4999998614100591, "val_acc": 1.0, "elapsed_s": 230.5}

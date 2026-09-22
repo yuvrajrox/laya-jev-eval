@@ -1,0 +1,1 @@
+{"model": "jev-1.13.0", "answers": {"intent": {"type": "choice", "choice": "complaint", "confidence": 0.92, "probabilities": {"complaint": 0.94, "inquiry": 0.03, "feedback": 0.0, "request": 0.03}}}, "usage": {"input_tokens": 390, "output_tokens": 48}}

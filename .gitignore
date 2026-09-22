@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# 1.6 GB, over GitHub's 100 MB file limit — attached to the GitHub Release instead.
+# Reproduce with src/train.py (~25 min on a GPU).
+*.safetensors
+
+# Re-downloadable from spamassassin.apache.org via src/public_data.py
+data/public/_archives/
