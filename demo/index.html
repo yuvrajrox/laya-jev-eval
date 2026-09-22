@@ -1,0 +1,177 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>System One Playground</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+ --paper:#0d1014;--panel:#151a21;--panel2:#1b2129;--ink:#e9edf1;--muted:#96a0ac;--faint:#6b7684;
+ --line:#252c36;--data:#5fc8e8;--good:#5fd39a;--warn:#e8b45e;--accent:#a78bfa;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",-apple-system,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:34px 24px 56px}
+header{margin-bottom:26px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:42px;line-height:1.05;margin:0 0 10px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0;font-size:16px;max-width:64ch}
+.sub b{color:var(--ink);font-weight:500}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px}
+.card h2{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:22px;margin:0 0 4px}
+.card .hint{font-size:13px;color:var(--faint);margin:0 0 16px}
+label{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);margin:0 0 7px}
+textarea,input,select{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+ border-radius:4px;padding:11px 12px;font:inherit;font-size:14px;resize:vertical}
+textarea:focus,input:focus,select:focus{outline:2px solid var(--data);outline-offset:1px}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.row>*{flex:1;min-width:120px}
+button{background:var(--data);color:#08141a;border:0;border-radius:4px;padding:11px 18px;
+ font:inherit;font-weight:600;font-size:14px;cursor:pointer;flex:0 0 auto}
+button:hover{filter:brightness(1.08)} button:disabled{opacity:.45;cursor:default}
+button.ghost{background:var(--panel2);color:var(--muted);border:1px solid var(--line);font-weight:500}
+.canvas{margin-top:18px;display:flex;gap:18px;align-items:flex-start}
+.gwrap{flex:0 0 260px}
+.g{display:grid;grid-template-columns:repeat(16,1fr);width:260px;height:260px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#0a0d11}
+.g i{display:block;width:100%;height:100%;transition:background .12s linear}
+.meter{flex:1;min-width:0}
+.bar{height:5px;background:var(--panel2);border-radius:3px;overflow:hidden;margin:6px 0 14px}
+.bar b{display:block;height:100%;width:0;background:var(--data);transition:width .1s linear}
+.stat{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);line-height:1.9}
+.stat span{color:var(--ink)}
+.out{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;display:none}
+.out.on{display:block}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;padding:4px 10px;
+ border-radius:99px;background:rgba(95,211,154,.13);color:var(--good);font-weight:600;letter-spacing:.04em}
+.pill.c{background:rgba(232,180,94,.13);color:var(--warn)}
+.kv{display:grid;grid-template-columns:82px 1fr;gap:9px;padding:9px 0;border-bottom:1px solid var(--line)}
+.kv:last-child{border-bottom:0}
+.kv .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);padding-top:3px}
+.kv .v{font-size:14.5px;line-height:1.5}
+.kv.mono .v{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--data)}
+.genbox{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.28);border-radius:5px;padding:13px 15px;margin:4px 0 12px}
+.glab{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin:0 0 7px}
+.gtext{font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.35;margin:0;color:var(--ink)}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);line-height:1.8}
+</style></head><body><div class="wrap">
+<header>
+ <p class="kicker">ModernBERT &middot; masked parallel decoding &middot; running locally</p>
+ <h1>A classifier that draws and writes</h1>
+ <p class="sub">Two heads on one 150M encoder. No autoregression, no API calls &mdash;
+ every cell and every word is decoded <b>in parallel</b>, then refined.</p>
+</header>
+
+<div class="cols">
+ <div class="card">
+  <h2>Draw</h2>
+  <p class="hint">256 cells start blank. Each round predicts all of them at once, keeps the most confident, re-guesses the rest.</p>
+  <label for="cap">Caption</label>
+  <input id="cap" value="a purple cat with yellow eyes on a mint background">
+  <div class="row">
+   <select id="preset" aria-label="Preset captions">
+     <option value="a purple cat with yellow eyes on a mint background">purple cat</option>
+     <option value="an orange fox with green eyes on a cream background">orange fox</option>
+     <option value="a white bunny with red eyes on a pink background">white bunny</option>
+     <option value="a brown bear with black eyes wearing a hat on a yellow background">bear in a hat</option>
+     <option value="a green frog with orange eyes on a white background">green frog</option>
+     <option value="a grey owl with yellow eyes on a teal background">grey owl</option>
+     <option value="a pink panda with blue eyes on a lime background">pink panda</option>
+     <option value="a blue dog with green eyes wearing a scarf on a cream background">dog in a scarf</option>
+   </select>
+   <button id="drawBtn">Generate</button>
+  </div>
+  <div class="canvas">
+   <div class="gwrap"><div class="g" id="grid"></div></div>
+   <div class="meter">
+    <label>Rounds</label><div class="bar"><b id="bar"></b></div>
+    <p class="stat">round <span id="rnd">&mdash;</span> of 12<br>
+    cells resolved <span id="res">0</span> / 256<br>
+    server time <span id="ms">&mdash;</span></p>
+   </div>
+  </div>
+ </div>
+
+ <div class="card">
+  <h2>Decide &amp; explain</h2>
+  <p class="hint">The decision comes from a list. The sentence underneath it does not &mdash; that is written fresh, all words at once.</p>
+  <label for="em">Customer email</label>
+  <textarea id="em" rows="4">What's the notice period on the annual contract? Trying to work out our renewal timeline.</textarea>
+  <div class="row">
+   <select id="epreset" aria-label="Preset emails">
+     <option>What's the notice period on the annual contract? Trying to work out our renewal timeline.</option>
+     <option>Lovely to deal with a company that answers the phone. That alone.</option>
+     <option>Would you be able to raise the daily transfer limit on my current account to £5,000? Happy to provide whatever verification you need.</option>
+     <option>The replacement you sent is the wrong colour. Again. This is the second time.</option>
+     <option>Could you tell me what the early repayment charge would be if I settled the loan in March?</option>
+   </select>
+   <button id="clsBtn">Classify</button>
+  </div>
+  <div class="out" id="out">
+   <p style="margin:0 0 12px"><span class="pill" id="intent">&mdash;</span>
+      <span class="stat" style="margin-left:8px">confidence <span id="conf">&mdash;</span> &middot; <span id="cms">&mdash;</span></span></p>
+   <div class="genbox"><p class="glab">Written by the model, word by word</p><p class="gtext" id="gen">&mdash;</p></div>
+   <div class="kv"><span class="k">Retrieved</span><span class="v" id="retr">&mdash;</span></div>
+  </div>
+ </div>
+</div>
+
+<footer>16&times;16 &middot; 16 colours &middot; 256 cells per image &middot; 150M params &middot; trained 35 min on one laptop GPU &middot; $0 per generation</footer>
+</div>
+<script>
+const HEX = {"A": "#1a1a1a", "B": "#f5f5f5", "C": "#9aa0a6", "D": "#d92b2b", "E": "#e8760c", "F": "#f0c000", "G": "#7cc000", "H": "#2f9e44", "I": "#5fd0a8", "J": "#159b9b", "K": "#1c6fd4", "L": "#26407a", "M": "#8a4fd0", "N": "#e86ab0", "O": "#8a5a2b", "P": "#f2dfc0"};
+const grid = document.getElementById("grid");
+const cellEls = [];
+for (let i = 0; i < 256; i++) { const e = document.createElement("i"); e.style.background = "#0a0d11"; grid.appendChild(e); cellEls.push(e); }
+
+function paint(s){ let n=0; for(let i=0;i<256;i++){ const c=s[i]; if(c && c!=="."){ cellEls[i].style.background=HEX[c]||"#0a0d11"; n++; } } return n; }
+
+const dBtn=document.getElementById("drawBtn"), cap=document.getElementById("cap");
+document.getElementById("preset").onchange=e=>{cap.value=e.target.value;};
+dBtn.onclick=async()=>{
+  dBtn.disabled=true; dBtn.textContent="Drawing…";
+  cellEls.forEach(e=>e.style.background="#0a0d11");
+  document.getElementById("res").textContent="0";
+  try{
+    const r=await fetch("/api/draw",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({caption:cap.value,rounds:12})});
+    const d=await r.json();
+    document.getElementById("ms").textContent=d.ms+" ms";
+    for(let i=0;i<d.frames.length;i++){
+      await new Promise(res=>setTimeout(res,110));
+      const n=paint(d.frames[i]);
+      document.getElementById("rnd").textContent=i+1;
+      document.getElementById("res").textContent=n;
+      document.getElementById("bar").style.width=(100*(i+1)/d.frames.length)+"%";
+    }
+  }catch(e){ document.getElementById("ms").textContent="error"; }
+  dBtn.disabled=false; dBtn.textContent="Generate";
+};
+
+const cBtn=document.getElementById("clsBtn"), em=document.getElementById("em");
+document.getElementById("epreset").onchange=e=>{em.value=e.target.value;};
+cBtn.onclick=async()=>{
+  cBtn.disabled=true; cBtn.textContent="Thinking…";
+  // Blank the previous answer immediately. Leaving a stale result on screen next to a new
+  // question makes it look like the model answered the wrong email.
+  document.getElementById("gen").textContent="…";
+  document.getElementById("retr").textContent="…";
+  document.getElementById("intent").textContent="…";
+  document.getElementById("intent").className="pill";
+  document.getElementById("conf").textContent="—";
+  document.getElementById("cms").textContent="—";
+  try{
+    const r=await fetch("/api/classify",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({email:em.value})});
+    const d=await r.json();
+    document.getElementById("out").classList.add("on");
+    const ip=document.getElementById("intent");
+    ip.textContent=d.intent; ip.className="pill"+(d.intent==="complaint"?" c":"");
+    document.getElementById("conf").textContent=d.conf;
+    document.getElementById("cms").textContent=d.ms+" ms";
+    document.getElementById("retr").textContent=d.retrieved;
+    document.getElementById("gen").textContent=d.generated;
+
+  }catch(e){}
+  cBtn.disabled=false; cBtn.textContent="Classify";
+};
+</script></body></html>
