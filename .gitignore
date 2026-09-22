@@ -10,3 +10,6 @@ __pycache__/
 
 # Re-downloadable from spamassassin.apache.org via src/public_data.py
 data/public/_archives/
+
+# Trained avatar checkpoints (~585 MB each). Reproduce with src/train_avatar.py (~35 min).
+checkpoints/
